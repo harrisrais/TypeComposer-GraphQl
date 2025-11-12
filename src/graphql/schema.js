@@ -1,9 +1,10 @@
 /* New method using schema-composer */
-import { SchemaComposer } from "graphql-compose";
+import { schemaComposer } from "graphql-compose";
+// import { SchemaComposer } from "graphql-compose";
 import { UserTC } from "./UserTC.js";
 import { PostTC } from "./PostTC.js";
 
-const schemaComposer = new SchemaComposer();
+// const schemaComposer = new SchemaComposer();
 
 schemaComposer.Query.addFields({
   users: UserTC.getResolver('findMany'),
